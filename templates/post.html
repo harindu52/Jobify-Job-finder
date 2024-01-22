@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header class="masthead" style="background-image:  url({{ url_for('static', filename='assets/img/job.png') }})">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>{{ post.Job}}</h1>
+                    <h2 class="subheading">{{ post.subtitle }}</h2>
+                    <span class="meta">Posted by
+                        <a href="#">{{ post.Company }}</a>
+<!--                        on {{ post.date }}-->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p style="white-space:pre-line">{{ post.Job_detail }}
+            </div>
+            <div class="font-italic border">
+                <p style="white-space:pre-line">{{ post.Eligible }}
+            </div>
+            <div class="container p-5 my-5 border col-md-10 col-lg-8 col-xl-7">
+                <p style="white-space:pre-line">{{ post.Letter }}
+            </div>
+
+        </div>
+    </div>
+</article>
+
+{% include "footer.html" %}
